@@ -24,7 +24,7 @@ library(vegan)
 
 
 
-# download the data for the analysis in PANGAEA here: xxxxxx - this information will be updated upon the final release of pangaes DOI
+# download the data for the analysis: see paper for data availability
 
 #Ternary plot analysis
 #Adult
