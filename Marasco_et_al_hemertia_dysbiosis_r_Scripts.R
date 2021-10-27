@@ -26,9 +26,8 @@ library(vegan)
 
 # download the data for the analysis: see paper for data availability
 
-#Ternary plot analysis
+#Ternary plot analysis - Input file: otu table available as supplementary data S1
 #Adult
-tax_tern_adult<-read.table("BD_Adult_Ready.txt",sep='\t',header = T,row.names = 1)
 
 summary(tax_tern_adult)
 
@@ -54,7 +53,7 @@ la<-ggtern(data=tax_tern_larvae, aes(y=replacement, z=similairty, x=Δ.richness,
   ggtitle("Larvae") +      #add title
   xlab("Δ.richness") +                       #replace default axis labels
   ylab("replacement") +
-  zlab("similairty")
+  zlab("similarity")
 la
 
 #pupae
@@ -191,7 +190,7 @@ write.table(triang2,"BD_Pupae.txt",sep='\t')
 write.table(triang3,"BD_Adult.txt",sep='\t')
 
 
-#Variation partitioning analysis using Varpart following the previos chink of code
+#Variation partitioning analysis using Varpart following the previos chunk of code
 varia<-varpart(otu_hermetia, ~ Stage + Diet, ~ Stage * Diet,data=stage_hermetia)
 showvarparts(3)
 
@@ -210,8 +209,7 @@ plot (varp, digits = 2)
 plot(varia)
 
 
-###Correlazion analysis among diet growth and taxonomy.
-
+###Correlation analysis among diet growth and taxonomy: for data avaialbility refer to manuscript.
 correlo2<-read.table("Larvae_W vs Taxa.txt",header=T,sep="\t")
 chart.Correlation(correlo2, histogram = TRUE, method = c("pearson", "kendall", "spearman"))
 
@@ -238,7 +236,7 @@ chart.Correlation(correlo2, histogram = TRUE, method = c("pearson", "kendall", "
 
 ##Centrality degree analysis  for co-occurrence netwrok analysis for each diet
 
-centrality_all<-read.table("2019_Network_Paramter_All.txt",header=T,sep="\t")
+centrality_all<-read.table("Paramter_All.txt",header=T,sep="\t")
 
 
 names(centrality_all)
