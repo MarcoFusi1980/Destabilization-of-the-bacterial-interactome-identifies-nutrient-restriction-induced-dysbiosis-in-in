@@ -24,7 +24,8 @@ library(vegan)
 
 
 
-# download the data for the analysis: see paper for data availability
+# download the data for the analysis: see paper for data availability - Repository 10.11922/sciencedb.01282
+
 
 #Ternary plot analysis - Input file: otu table available as supplementary data S1
 #Adult
